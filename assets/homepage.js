@@ -5,7 +5,7 @@ var repoSerachTerm = document.querySelector("#repo-search-term");
 
 
 var getUsersRepos = function (user) {
-  var apiURL = "https://api.github.com/users/" + user + "/repos";
+  var apiUrl = "https://api.github.com/users/" + user + "/repos";
 
   fetch(apiUrl)
   .then(function(response) {
@@ -18,9 +18,9 @@ var getUsersRepos = function (user) {
       alert('Error: GitHub User Not Found');
     }
   })
-  .catch(function(error){
-     // Notice this `.catch()` getting chained onto the end of the `.then()` method
-     alert("Unable to connect to GitHub");
+  .catch(function(error) {
+    // Notice this `.catch()` getting chained onto the end of the `.then()` method
+    alert("Unable to connect to GitHub");
   });
 
 var formSubmitHandler = function (event) {
